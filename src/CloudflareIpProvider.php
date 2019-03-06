@@ -5,7 +5,7 @@ namespace TaylorNetwork\CloudflareIP;
 use TaylorNetwork\CloudflareIP\Commands\CloudflareIpInstall;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class CloudflareIpProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
