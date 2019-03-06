@@ -1,0 +1,25 @@
+{
+    "name": "taylornetwork/cloudflare-ip-laravel",
+    "require": {
+        "illuminate/support": ">=5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Taylor",
+            "email": "sam@taylornetwork.ca"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TaylorNetwork\\CloudflareIP\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TaylorNetwork\\CloudflareIP\\CloudflareIpProvider"
+            ]
+        }
+    }
+}
