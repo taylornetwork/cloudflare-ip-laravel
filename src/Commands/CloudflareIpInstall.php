@@ -11,7 +11,7 @@ class CloudflareIpInstall extends Command
      *
      * @var string
      */
-    protected $signature = 'cfip:install';
+    protected $signature = 'cf:install';
 
     /**
      * The console command description.
