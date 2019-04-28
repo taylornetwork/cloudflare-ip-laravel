@@ -2,8 +2,8 @@
 
 namespace TaylorNetwork\CloudflareIP;
 
-use TaylorNetwork\CloudflareIP\Commands\CloudflareIpInstall;
 use Illuminate\Support\ServiceProvider;
+use TaylorNetwork\CloudflareIP\Commands\CloudflareIpInstall;
 
 class CloudflareIpProvider extends ServiceProvider
 {
@@ -26,6 +26,5 @@ class CloudflareIpProvider extends ServiceProvider
      */
     public function register()
     {
-        
     }
 }
