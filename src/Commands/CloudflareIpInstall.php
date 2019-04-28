@@ -41,8 +41,7 @@ class CloudflareIpInstall extends Command
         $this->line('The following line will be added...');
         $this->info("require_once __DIR__.'/../bootstrap/cloudflare-ip.php';");
 
-        if($this->confirm('Are you sure you want to continue? (yes/no)')) {
-
+        if ($this->confirm('Are you sure you want to continue? (yes/no)')) {
             $this->info('Copying cloudflare-ip.php to bootstrap...');
             copy(__DIR__.'/../cloudflare-ip.php', base_path('bootstrap/cloudflare-ip.php'));
 
@@ -52,13 +51,12 @@ class CloudflareIpInstall extends Command
             $this->info('Adding line to index.php...');
             $file = explode(PHP_EOL, file_get_contents(base_path('public/index.php')));
             $line = array_search("\$app = require_once __DIR__.'/../bootstrap/app.php';", $file);
-            $firstHalf = array_slice($file, 0, $line+1);
+            $firstHalf = array_slice($file, 0, $line + 1);
             array_push($firstHalf, '');
             array_push($firstHalf, "require_once __DIR__.'/../bootstrap/cloudflare-ip.php';");
-            file_put_contents(base_path('public/index.php'), implode(PHP_EOL, array_merge($firstHalf, array_slice($file, $line+1))));
+            file_put_contents(base_path('public/index.php'), implode(PHP_EOL, array_merge($firstHalf, array_slice($file, $line + 1))));
 
             $this->info('Done.');
         }
-        
     }
 }
